@@ -1,5 +1,3 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Reddit NLP Classification Project for GA Streamlit Lab
-
 #### Rachel Z. Insler, Data Science Immersive Student Project
 ## Improving the auto-moderation feature for r/books and r/writing subreddits
 ### "Should I post this to r/books or r/writing?"
