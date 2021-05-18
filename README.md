@@ -6,7 +6,7 @@ An [online NLP classification app](http://bit.ly/reddit-project) built and deplo
 
 This app uses a model based on a Logistic Regression classification and Term Frequency-Inverse Document Frequency transformer to classify text submissions as more appropriate for the **r/books** subreddit vs the **r/writing** subreddit. 
 
-Learn more about the model in [the presentation.](https://docs.google.com/presentation/d/14QqcgZnQoDOAsfxOTHvzoNpQ6SRuaYRRejqTdo0tPjw/edit?usp=sharing)
+Learn more about the model in [the presentation.](https://docs.google.com/presentation/d/1WSJDRFZW3HSmVp5tdoYThE5nDHetxu3K_qQ1-TYE0NM/edit?usp=sharing)
 
 
 ### Executive Summary
