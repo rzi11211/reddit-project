@@ -1,4 +1,3 @@
-#### Rachel Z. Insler, Data Science Immersive Student Project
 ## Improving the auto-moderation feature for r/books and r/writing subreddits
 ### "Should I post this to r/books or r/writing?"
 
