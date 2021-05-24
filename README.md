@@ -110,27 +110,8 @@ Those posts consisted of 30,000 submissions and 30,000 comments, pulled in two s
        - Training and testing scores were similar, indicating an acceptable level of variance, but the model is accurate only 76.2% of the time on testing data. Though outperforming the null model (50%), there is significant room for improvement.  
   
    
-5.  Developed and fitted several additional classification model iterations using various hyperparameters that were optimized through trial and error. After four models, 12,500 rows were added to each class to attempt to improve predictive power. Results are summarized here:
+5.  Developed and fitted several additional classification model iterations using various hyperparameters that were optimized through trial and error. After four models, 12,500 rows were added to each class to attempt to improve predictive power. 
 
-
-| Model Name 	| Transformer 	| Estimator 	| Transformer  Hyperparameters 	| Estimator Hyperparameters 	| GridSearch 	| Train 	| Test 	| CV  Score 	|
-|-	|:-:	|:-:	|-	|-	|-	|-	|-	|-	|
-| A 	| CountVectorizer 	| LogisticRegression 	| max_features = 5_000,  max_df = .95, min_df = .05,  ngram_range=(1,2) 	| Default 	| No 	| 0.757 	| 0.762 	| 0.746 	|
-| B 	| CountVectorizer 	| LogisticRegression 	| max_features = 10_000, max_df = 0.9, min_df = 2, ngram_range=(1,2) 	| C = 0.1 	| Yes 	| 0.895 	| 0.811 	| 0.784 	|
-| C 	| CountVectorizer 	| LogisticRegression 	| max_features = 15_000, max_df = 0.8, min_df = 2, ngram_range=(1,2) 	| C = 0.1 	| Yes 	| 0.818 	| 0.786 	| 0.770 	|
-| D 	| CountVectorizer 	| LogisticRegression 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range=(1,2) 	| C = 0.1 	| Yes 	| 0.816 	| 0.785 	| 0.770 	|
-| E 	| CountVectorizer (added 12,500  rows to each  class) 	| LogisticRegression 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range=(1,2) 	| C = 0.1 	| Yes 	| 0.831 	| 0.811 	| 0.806 	|
-| F 	| TFIDF 	| LogisticRegression 	| max_features = 12_500, ngram_range = (1,2) 	| C = 1 	| Yes 	| 0.889 	| 0.832 	| 0.829 	|
-| G 	| TFIDF 	| LogisticRegression 	| max_features = 12_500, max_df = 0.7, min_df = 3, ngram_range = (1,3) 	| C = 1 	| Yes 	| 0.889 	| 0.831 	| 0.829 	|
-| H 	| TFIDF 	| LogisticRegression 	| max_features = 10_000, max_df = 0.65, min_df = 5, ngram_range = (1,4) 	| C = 1 	| Yes 	| 0.885 	| 0.830 	| 0.829 	|
-| I 	| TFIDF 	| LogisticRegression 	| max_features = 10_000, max_df = 0.65, min_df = 5, ngram_range = (1,4) 	| C = 0.1 	| No 	| 0.836 	| 0.814 	| 0.786 	|
-| J 	| CountVectorizer 	| BernoulliNB 	| Default 	| Default 	| No 	| 0.828 	| 0.717 	| 0.724 	|
-| K 	| CountVectorizer 	| BernoulliNB 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range = (1,2) 	| Default 	| No 	| 0.799 	| 0.719 	| 0.721 	|
-| L 	| TFIDF 	| BernoulliNB 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range = (1,4) 	| Default 	| No 	| 0.792 	| 0.714 	| 0.718 	|
-| M 	| CountVectorizer 	| AdaBoostClassifier with LogReg 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range=(1,2) 	| n_estimators=150 	| No 	| 0.813 	| 0.787 	| 0.780 	|
-| N 	| CountVectorizer 	| RandomForestClassifier with Decision Tree 	| max_features = 10_000, max_df = 0.7, min_df = 2, ngram_range=(1,2) 	| n_estimators=150, max_depth = None 	| Yes 	| 0.995 	| 0.797 	| 0.795 	|
-| O 	| CountVectorizer 	| ExtraTreesClassifier with DecisionTree 	| max_df = 0.7, min_df = 2, n_gram_range = (1,2) 	| n_estimators=300, max_features=auto 	| No 	| 0.997 	| 0.784 	| 0.754 	|
-| P 	| CountVectorizer 	| Support Vector Machine 	| max_df = .7, min_df = 2, ngram_range=(1,2)) 	| Default 	| No 	| 0.876 	| 0.814 	| 0.807 	|
 
 6. Identified the two best-performing models (i.e. the models with the greatest accuracy on test data without overfitting) for further evaluation
 
